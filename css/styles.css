@@ -1,0 +1,450 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+/*colors used
+background: green  */
+/*
+Code to clean all default settings from the browser such as border and font etc must be above the code for linking-->
+*/
+:root  {
+  --primary-color: black;
+  --secondary-color: #8B0000;
+  --back-color: #c0c0c0;
+  --anchor-visited: #4c1130;
+  --anchor-normal: ##1C3131;
+  --hover-color:#00008B;
+  --button-color:#7FFF00;
+  --button-1:#EBEBEB;
+  --navigation-color:#F5F5F5;
+  --grid-background: lightgrey;
+  --grid-item-color:#800080;
+  --footer-size: 30px;
+  --title-size: 55px;
+
+}
+
+
+
+
+body {
+  font-family: "New Rocker", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  background-color:	var(--back-color);
+
+}
+
+span {
+  text-decoration: underline;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: var(--title-size);
+  font-weight: 500
+}
+
+h2, h3 {
+  color: var(--secondary-color);
+  font-size: 45px;
+  font-weight: 500;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+a {
+  color: var(--anchor-normal);
+}
+
+a:visited {
+  color: var(--anchor-visited);
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--hover-color);
+}
+
+button {
+  color: var(--primary-color);
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: overline;
+  width: 10%;
+  font-family: inherit;
+  background-color: #2B2B2B;
+  opacity: 0.8;
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  color: #00008B;
+  opacity: 0.7;
+}
+.button1 {
+color: var(--button-1);
+}
+/* **is for class selector and ### is for id selector### */
+.button2 {
+  color: var(--button-color);
+  background-color:var(--secondary-color);
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: overline;
+  width: 15%;
+}
+
+/* class selector */
+.navigation-list__item {
+  background-color: var(--navigation-color);
+}
+
+.profile_pic {
+  float: left;
+  width: 250px;
+  height: auto;
+  border-radius: 40%;
+  margin-right: 40px;
+}
+
+.profile {
+  min-width: 360px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page_header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+  text-align: center;
+}
+
+.page_header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page_footer {
+  font-size: var(--footer-size);
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.social_media {
+  display: inline-block;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 25px 1fr 25px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 250px 25px 250px;
+  grid-template-rows: 250px 250px;
+  grid-gap: 25px;
+}
+
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.grid > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.grid__item {
+  background-color: var(--grid-background);
+  font-size: 15px;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+.grid__item h2 {
+  font-size: 25px;
+  font-family: 'Bungee Spice', cursive;
+  color: var(--grid-item-color);
+}
+
+/*
+gotta understand this*/
+.grid__item:last-child {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 0;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-row-span: 2;
+  grid-row-end: 3;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.button, button{
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display:inline-block;
+  /* takes the font from the outer container */
+  font-family: 'Bungee Spice', cursive;
+  /* styles the button */
+  background-color: purple;
+  color: white;
+  text-decoration: underline;
+  padding: 15px;
+  border-radius: 30px;
+  /* width of the border, type, color */
+  border-bottom: 20px solid rgba(0, 0, 0, 0.3);
+
+  -webkit-transition-duration: 1s;
+
+       -o-transition-duration: 1s;
+
+          transition-duration: 1s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+
+}
+
+
+.button:hover,
+.button:focus {
+/* insert styling */
+cursor: pointer;
+ /* reduces the opacity to .% */
+ opacity: 0.7
+
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+.sun {
+
+  -webkit-animation-duration: 3s;
+
+          animation-duration: 3s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+
+
+.cloud-front {
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-name: cloud-move;
+          animation-name: cloud-move;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+from {
+-webkit-transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
+
+}
+
+to {-webkit-transform: translate(100px, 48px);transform: translate(100px, 48px);
+
+}
+}
+
+@keyframes cloud-move-reverse {
+from {
+-webkit-transform: translate(446px, 48px);
+        transform: translate(446px, 48px);
+
+}
+
+to {-webkit-transform: translate(100px, 48px);transform: translate(100px, 48px);
+
+}
+}
+
+.cloud-back {
+  -webkit-animation: 28s cloud-move-reverse infinite alternate linear;
+          animation: 28s cloud-move-reverse infinite alternate linear;
+}
+tr {
+  font-size: 30px;
+  font-family: 'Bungee Spice', cursive;
+color: var(--primary-color);
+
+}
