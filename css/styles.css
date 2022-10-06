@@ -85,6 +85,8 @@ button:hover, button:focus {
   color: #00008B;
   opacity: 0.7;
 }
+
+
 .button1 {
 color: var(--button-1);
 }
@@ -118,11 +120,15 @@ color: var(--button-1);
 }
 
 .page_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 20px;
+   display: flex;
+   width: 100%;
+   padding: 20px;
+   border-bottom-style: solid;
+   border-color: black;
+
+   border-bottom-width: 100%;
+   }
+
 }
 
 .page_header__item {
@@ -145,16 +151,12 @@ color: var(--button-1);
 }
 
 .page_footer {
-  font-size: var(--footer-size);
-  clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+ display: flex;
+ width: 100%;
+ padding: 20px;
+ border-top-style: dashed;
+ border-color: var(--dark-grey);
+
 }
 
 .navigation-list {
