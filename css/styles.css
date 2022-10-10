@@ -11,12 +11,12 @@ background: green  */
 /*
 Code to clean all default settings from the browser such as border and font etc must be above the code for linking-->
 */
-:root  {
+:root {
   --primary-color: black;
   --secondary-color: #8B0000;
   --back-color: #c0c0c0;
   --anchor-visited: #4c1130;
-  --anchor-normal: ##1C3131;
+  --anchor-normal: #1C3131;
   --hover-color:#00008B;
   --button-color:#7FFF00;
   --button-1:#EBEBEB;
@@ -54,6 +54,13 @@ h2, h3 {
   font-size: 45px;
   font-weight: 500;
   font-family: 'Noto Sans Mono', monospace;
+}
+h4{
+color: var(--primary-color);
+font-size: 20px;
+font-weight: 100;
+font-family: "Times New Roman", Times, serif;
+
 }
 
 a {
@@ -126,10 +133,10 @@ color: var(--button-1);
    border-bottom-style: solid;
    border-color: black;
 
-   border-bottom-width: 100%;
+   border-bottom-width: thick;
    }
 
-}
+
 
 .page_header__item {
   -webkit-box-flex: 0;
@@ -330,7 +337,13 @@ gotta understand this*/
   transition-property: opacity;
 
 }
-
+.contact__text {
+  max-width: 700px;
+  margin: 0 auto;
+  flex: 1 1 100px;
+  text-align:center;
+}
+.fieldset{     min-width: auto; }
 
 .button:hover,
 .button:focus {

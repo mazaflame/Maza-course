@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Contact Maza</title>
-  <link rel="shortcut icon" href="images/jimii.jpg" type="image/x-icon" >
+  <link rel="shortcut icon" href="images/jimii.jpg" type="image/x-icon">
 
-  <link rel="stylesheet" href="css/normalize.css" type="text/css" >
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
       <a href="index.html"> &lt;-- go back</a><br>
     </nav>
 
-    <img src="https://img.freepik.com/free-photo/vintage-pink-telephone-assortment_23-2148913961.jpg?w=2000" width="210" height="90" alt="telephone image" >
+    <img src="https://img.freepik.com/free-photo/vintage-pink-telephone-assortment_23-2148913961.jpg?w=2000" width="210" height="90" alt="telephone image">
 
 
 
@@ -46,37 +46,49 @@
 
   <br>
 
-  <form action="_blank" method="post">
-    <label class="standard-label" for="contact-email">Email: </label>
-    <input type="email" id="contact-email" required>
-    <br >
-    <br>
-    <label class="standard-label" for="telephone">Telephone: </label>
-    <input type="tel" id="telephone" required>
-    <br >
-    <br>
-    <label class="standard-label" for="message">Message: </label>
-    <textarea id="message" maxlength="50" required></textarea>
-    <br>
-    <br>
-    <input type="submit" value="Send message">
+  <div class="container">
+    <form id="contact" action="/" method="get" onsubmit="alert('Thanks for your message :)')">
+      <p>
+      <h2>Contact me via the contact form below.</h2>
+      </p>
+      <br>
+      <!-- <p>Fill out the following fields.</p>-->
+      <fieldset>
+        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Phone Number (optional)" type="tel" tabindex="3">
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Type your message here...." tabindex="4" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
 
-  </form>
+
+
+
   <footer class="page_footer">
     <p> <strong>Find me on</strong></p>
 
     <div class="social_media">
 
       <a href="https://twitter.com/home" target="blank">
-        <img src="images/twiticon.svg" alt="Twitter" >
+        <img src="images/twiticon.svg" alt="Twitter">
 
       </a>
       <a href="https://www.linkedin.com/feed/" target="blank">
-        <img src="images/linkedinicon.svg" alt="LinkedIn" >
+        <img src="images/linkedinicon.svg" alt="LinkedIn">
       </a>
     </div>
   </footer>
-<script src="js/tota11y.min.js"></script>
+  <script src="js/tota11y.min.js"></script>
 </body>
 
 </html>
